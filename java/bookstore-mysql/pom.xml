@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>nyayapati-bookstore</artifactId>
+    <groupId>com.nyayapati.bookstore</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.nyayapati.bookstore.mysql</groupId>
+  <artifactId>bookstore-mysql</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>bookstore-mysql</name>
+  <dependencies>
+    <dependency>
+       <groupId>mysql</groupId>
+       <artifactId>mysql-connector-java</artifactId>
+       <version>5.1.6</version>
+       <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

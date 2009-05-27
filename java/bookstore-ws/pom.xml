@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>nyayapati-bookstore</artifactId>
+    <groupId>com.nyayapati.bookstore</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.nyayapati.bookstore.ws</groupId>
+  <artifactId>bookstore-ws</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>bookstore SOAP Web service</name>
+  <build>
+    <finalName>bookstore-ws</finalName>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>com.nyayapati.bookstore.core</groupId>
+      <artifactId>bookstore-core</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.nyayapati.bookstore.mysql</groupId>
+      <artifactId>bookstore-mysql</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

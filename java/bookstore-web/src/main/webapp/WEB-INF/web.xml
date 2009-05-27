@@ -1,0 +1,92 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+      version="2.5">
+<!-- 	      
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" version="2.4"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">         
+ -->         
+	<display-name>Bookstore</display-name>
+	
+	<filter>
+		<filter-name>interceptAllFilter</filter-name>
+		<filter-class>
+			com.nyayapati.bookstore.web.filter.InterceptAllFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>interceptAllFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+  <!-- 
+  	<filter>
+		<filter-name>customUrlRewrite</filter-name>
+		<filter-class>
+			com.nyayapati.bookstore.web.servlet.CustomUrlRewriteFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>customUrlRewrite</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 -->
+	 <!-- =====================SERVLETS======================== -->
+ 
+     <servlet>
+	   <servlet-name>View</servlet-name>
+	   <servlet-class>com.nyayapati.bookstore.web.servlet.ViewBookServlet</servlet-class>
+	 </servlet> 
+	 <servlet-mapping>
+	   <servlet-name>View</servlet-name>
+	   <url-pattern>/books/view.do</url-pattern>
+	 </servlet-mapping>
+	 
+	<servlet>
+	   <servlet-name>Add</servlet-name>
+	   <servlet-class>com.nyayapati.bookstore.web.servlet.AddBookServlet</servlet-class>
+	 </servlet> 
+	 <servlet-mapping>
+	   <servlet-name>Add</servlet-name>
+	   <url-pattern>/books/add.do</url-pattern>
+	 </servlet-mapping>
+	 
+	<servlet>
+	   <servlet-name>Update</servlet-name>
+	   <servlet-class>com.nyayapati.bookstore.web.servlet.UpdateBookServlet</servlet-class>
+	 </servlet> 
+	 <servlet-mapping>
+	   <servlet-name>Update</servlet-name>
+	   <url-pattern>/books/update.do</url-pattern>
+	 </servlet-mapping>
+	 
+	 <servlet>
+	   <servlet-name>Delete</servlet-name>
+	   <servlet-class>com.nyayapati.bookstore.web.servlet.DeleteBookServlet</servlet-class>
+	 </servlet> 
+	 <servlet-mapping>
+	   <servlet-name>Delete</servlet-name>
+	   <url-pattern>/books/delete.do</url-pattern>
+	 </servlet-mapping>	
+	 
+	 <servlet>
+	   <servlet-name>Error1</servlet-name>
+	   <servlet-class>com.nyayapati.bookstore.web.servlet.ErrorServlet</servlet-class>
+	 </servlet> 
+	 <servlet-mapping>
+	   <servlet-name>Error1</servlet-name>
+	   <url-pattern>/error.do</url-pattern>
+	 </servlet-mapping>
+ 
+	<!-- =====================ERROR PAGE======================== -->	
+
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/error.do?code=500</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error.do?code=404</location>
+	</error-page> 	
+	 
+</web-app>
