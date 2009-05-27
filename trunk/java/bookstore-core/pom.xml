@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>nyayapati-bookstore</artifactId>
+    <groupId>com.nyayapati.bookstore</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.nyayapati.bookstore.core</groupId>
+  <artifactId>bookstore-core</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>bookstore-core Business logic</name>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
